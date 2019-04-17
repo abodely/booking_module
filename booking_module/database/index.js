@@ -1,10 +1,10 @@
 const Sequelize = require('sequelize');
-const pw = process.env.MYSQL_ROOT_PW || require('./config/sequelize.config').rootPW;
+const pw = process.env.MYSQL_ROOT_PW || require('./config/example.config').rootPW;
 
 const databaseName = process.env.MYSQL_DATABASE || 'bookings';
 
 
-const db = new Sequelize(databaseName, 'root', pw, {
+const db = new Sequelize(databaseName, 'root', '', {
   host: process.env.MYSQL_URL || 'localhost',
   dialect: 'mysql',
   logging: false,
