@@ -5,3 +5,5 @@ webpack.config.js
 client/dist/BookingModule.bundle.js
 tests/coverage
 .eslintignore
+accoms.csv
+guest.csv
