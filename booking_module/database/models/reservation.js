@@ -13,18 +13,18 @@ module.exports = (sequelize, type) => {
     accommodation_id: {
       type: type.INTEGER,
       allowNull: false,
-      references: {
-        model: 'accommodation',
-        key: 'id',
-      },
+      // references: {
+      //   model: 'accommodation',
+      //   key: 'id',
+      // },
     },
     guest_id: {
       type: type.INTEGER,
       allowNull: false,
-      references: {
-        model: 'guests',
-        key: 'id',
-      },
+      // references: {
+      //   model: 'guests',
+      //   key: 'id',
+      // },
     },
     total_guests: {
       type: type.INTEGER,

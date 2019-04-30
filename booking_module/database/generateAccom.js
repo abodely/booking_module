@@ -47,12 +47,12 @@ const getSpecial = () => {
     const availability_end_date = faker.date.between('2020-04-01', '2022-01-01').toISOString()
     const createdAt = new Date().toISOString();
     if(i === 0) {
-      const header = '_id, price_per_day, cleaning_fee, additional_guest_fee, accommodations_tax, general_tax, rating_score, number_of_ratings, guest_threshold, max_guests, minimum_stay_length, availability_end_date, availability_last_updated, number_viewing_listing, above_avg_views, rare_find, hot_item, createdAt, updatedAt\n';
+      const header = '_id,price_per_day,cleaning_fee,additional_guest_fee,accommodations_tax,general_tax,rating_score,number_of_ratings,guest_threshold,max_guests,minimum_stay_length,availability_end_date,availability_last_updated,number_viewing_listing,above_avg_views,rare_find,hot_item,createdAt,updatedAt\n';
       if(!file.write(header)) {
         await new Promise(resolve => file.once('drain', resolve))
       }
     } else {
-      const row = `${i}, ${price_per_day}, ${cleaning_fee}, ${additional_guest_fee}, ${accommodations_tax}, ${general_tax}, ${rating_score}, ${number_of_ratings}, ${guest_threshold}, ${max_guests}, ${minimum_stay_length}, ${availability_end_date}, ${availability_last_updated}, ${number_viewing_listing}, ${special.above_avg_views}, ${special.rare_find}, ${special.hot_item}, ${createdAt}, ${createdAt}\n`
+      const row = `${i},${price_per_day},${cleaning_fee},${additional_guest_fee},${accommodations_tax},${general_tax},${rating_score},${number_of_ratings},${guest_threshold},${max_guests},${minimum_stay_length},${availability_end_date},${availability_last_updated},${number_viewing_listing},${special.above_avg_views},${special.rare_find},${special.hot_item},${createdAt},${createdAt}\n`
       if(!file.write(row)) {
         await new Promise(resolve => file.once('drain', resolve))
       }
